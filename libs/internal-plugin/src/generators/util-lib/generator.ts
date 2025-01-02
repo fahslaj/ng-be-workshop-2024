@@ -10,6 +10,7 @@ export async function utilLibGenerator(
   const name = `util-${options.name}`;
   const scope = options.name;
   await libraryGenerator(tree, {
+    name,
     directory: join(options.directory, name),
     tags: `type:util, scope:${scope}`,
   });
