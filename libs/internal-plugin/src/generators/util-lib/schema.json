@@ -26,8 +26,9 @@
         "items": [
           { "value": "movies" },
           { "value": "api" },
-          { "value": "shared"}
+          { "value": "shared" }
         ]
+      }
     }
   },
   "required": ["name"]
