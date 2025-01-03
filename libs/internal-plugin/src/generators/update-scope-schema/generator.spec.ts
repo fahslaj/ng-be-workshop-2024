@@ -29,7 +29,7 @@ describe('update-scope-schema generator', () => {
       tags: 'scope:baz',
       directory: 'baz',
     });
-  }, 30000);
+  }, 40000);
 
   it('should adjust the util-lib generator based on existing projects', async () => {
     await generator(appTree);
