@@ -8,11 +8,10 @@ export async function utilLibGenerator(
   options: UtilLibGeneratorSchema
 ) {
   const name = `util-${options.name}`;
-  const scope = options.name;
   await libraryGenerator(tree, {
     name,
     directory: join('libs', options.directory, name),
-    tags: `type:util, scope:${scope}`,
+    tags: `type:util, scope:${options.directory}`,
   });
   // comment the rest of the code
   await formatFiles(tree);
