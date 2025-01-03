@@ -5,6 +5,7 @@
 
 import { Logger } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
+import { sendNotification } from '@nx-workshop/util-notifications';
 import { AppModule } from './app/app.module';
 
 async function bootstrap() {
@@ -16,6 +17,8 @@ async function bootstrap() {
   Logger.log(
     `🚀 Application is running on: http://localhost:${port}/${globalPrefix}`
   );
+
+  sendNotification('clientId');
 }
 
 bootstrap();
