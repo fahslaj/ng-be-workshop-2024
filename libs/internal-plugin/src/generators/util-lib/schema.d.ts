@@ -1,4 +1,4 @@
 export interface UtilLibGeneratorSchema {
   name: string;
-  directory: 'movies' | 'api' | 'shared';
+  directory: 'api' | 'movies' | 'app' | 'internal' | 'shared' | 'video-games';
 }

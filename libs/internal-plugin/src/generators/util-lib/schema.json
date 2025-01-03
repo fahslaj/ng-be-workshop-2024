@@ -24,11 +24,33 @@
         "message": "Which directory would you like to use?",
         "type": "list",
         "items": [
-          { "value": "movies" },
-          { "value": "api" },
-          { "value": "shared" }
+          {
+            "value": "api",
+            "label": "api"
+          },
+          {
+            "value": "movies",
+            "label": "movies"
+          },
+          {
+            "value": "app",
+            "label": "app"
+          },
+          {
+            "value": "internal",
+            "label": "internal"
+          },
+          {
+            "value": "shared",
+            "label": "shared"
+          },
+          {
+            "value": "video-games",
+            "label": "video-games"
+          }
         ]
-      }
+      },
+      "enums": ["api", "movies", "app", "internal", "shared", "video-games"]
     }
   },
   "required": ["name"]
