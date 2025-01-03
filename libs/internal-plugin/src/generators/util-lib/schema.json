@@ -20,7 +20,14 @@
         "$source": "argv",
         "index": 1
       },
-      "x-prompt": "Which directory would you like to use?"
+      "x-prompt": {
+        "message": "Which directory would you like to use?",
+        "type": "list",
+        "items": [
+          { "value": "movies" },
+          { "value": "api" },
+          { "value": "shared"}
+        ]
     }
   },
   "required": ["name"]

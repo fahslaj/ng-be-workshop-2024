@@ -11,7 +11,7 @@ export async function utilLibGenerator(
   const scope = options.name;
   await libraryGenerator(tree, {
     name,
-    directory: join(options.directory, name),
+    directory: join('libs', options.directory, name),
     tags: `type:util, scope:${scope}`,
   });
   // comment the rest of the code
