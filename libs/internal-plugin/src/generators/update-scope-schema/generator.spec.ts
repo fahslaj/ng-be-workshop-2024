@@ -6,7 +6,7 @@ import { readFileSync } from 'fs';
 import { join } from 'path';
 
 import { Linter } from '@nx/eslint';
-import generator from './generator';
+import { generator } from './generator';
 
 describe('update-scope-schema generator', () => {
   let appTree: Tree;
@@ -24,7 +24,12 @@ describe('update-scope-schema generator', () => {
       tags: 'scope:bar',
       directory: 'bar',
     });
-  });
+    await libraryGenerator(appTree, {
+      name: 'baz',
+      tags: 'scope:baz',
+      directory: 'baz',
+    });
+  }, 30000);
 
   it('should adjust the util-lib generator based on existing projects', async () => {
     await generator(appTree);
@@ -41,6 +46,10 @@ describe('update-scope-schema generator', () => {
         value: 'bar',
         label: 'bar',
       },
+      {
+        value: 'baz',
+        label: 'baz',
+      },
     ]);
     const schemaInterface = appTree.read(
       'libs/internal-plugin/src/generators/util-lib/schema.d.ts',
@@ -48,7 +57,7 @@ describe('update-scope-schema generator', () => {
     );
     expect(schemaInterface).toContain(`export interface UtilLibGeneratorSchema {
   name: string;
-  directory: 'foo' | 'bar';
+  directory: 'foo' | 'bar' | 'baz';
 }`);
   });
 });
