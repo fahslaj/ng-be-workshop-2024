@@ -90,6 +90,20 @@
           "targetName": "tsc:build",
           "configName": "tsconfig.lib.json"
         }
+      },
+      "exclude": ["libs/api/util-notifications/*"]
+    },
+    {
+      "plugin": "@nx/js/typescript",
+      "include": ["libs/api/util-notifications/*"],
+      "options": {
+        "typecheck": {
+          "targetName": "typecheck"
+        },
+        "build": {
+          "targetName": "build",
+          "configName": "tsconfig.lib.json"
+        }
       }
     }
   ],

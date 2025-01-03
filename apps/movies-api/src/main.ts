@@ -5,7 +5,7 @@
 
 import { Logger } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
-import { sendNotification } from '@nx-workshop/util-notifications';
+import { sendNotification } from '@nx-workshop/api-util-notifications';
 import { AppModule } from './app/app.module';
 
 async function bootstrap() {

@@ -7,10 +7,9 @@ export async function utilLibGenerator(
   tree: Tree,
   options: UtilLibGeneratorSchema
 ) {
-  const name = `util-${options.name}`;
   await libraryGenerator(tree, {
-    name,
-    directory: join('libs', options.directory, name),
+    name: `${options.directory}-util-${options.name}`,
+    directory: join('libs', options.directory, `util-${options.name}`),
     tags: `type:util, scope:${options.directory}`,
   });
   // comment the rest of the code

@@ -1,5 +1,5 @@
 {
-  "name": "util-notifications",
+  "name": "api-util-notifications",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/api/util-notifications/src",
   "projectType": "library",

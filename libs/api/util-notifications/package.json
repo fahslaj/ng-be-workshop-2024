@@ -1,5 +1,5 @@
 {
-  "name": "@nx-workshop/util-notifications",
+  "name": "@nx-workshop/api-util-notifications",
   "version": "0.0.1",
   "dependencies": {
     "tslib": "^2.3.0"
