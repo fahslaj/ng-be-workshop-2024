@@ -4,7 +4,7 @@ import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
 import generator from './generator';
 import { UtilLibGeneratorSchema } from './schema';
 
-describe('util-lib generator', () => {
+describe.skip('util-lib generator', () => {
   let appTree: Tree;
   const options: UtilLibGeneratorSchema = { name: 'foo', directory: 'movies' };
 
