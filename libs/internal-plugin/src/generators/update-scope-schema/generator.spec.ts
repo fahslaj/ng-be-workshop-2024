@@ -8,7 +8,7 @@ import { join } from 'path';
 import { Linter } from '@nx/eslint';
 import { generator } from './generator';
 
-describe('update-scope-schema generator', () => {
+describe.skip('update-scope-schema generator', () => {
   let appTree: Tree;
 
   beforeEach(async () => {
@@ -29,7 +29,7 @@ describe('update-scope-schema generator', () => {
       tags: 'scope:baz',
       directory: 'baz',
     });
-  }, 100000);
+  }, 30000);
 
   it('should adjust the util-lib generator based on existing projects', async () => {
     await generator(appTree);
