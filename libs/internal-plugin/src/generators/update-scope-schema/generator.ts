@@ -6,7 +6,7 @@ import {
   updateJson,
 } from '@nx/devkit';
 
-export default async function (tree: Tree) {
+export async function generator(tree: Tree) {
   const scopes = getScopes(getProjects(tree));
   updateSchemaJson(tree, scopes);
   updateSchemaInterface(tree, scopes);
