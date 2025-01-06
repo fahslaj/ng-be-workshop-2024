@@ -20,5 +20,13 @@ describe('AppController', () => {
         MOVIES_DATA.sort((a, b) => a.popularity - b.popularity)
       );
     });
+
+    it('flaky test', () => {
+      if (Math.random() > 0.5) {
+        expect(1).toBe(1);
+      } else {
+        expect(1).toBe(2);
+      }
+    });
   });
 });
