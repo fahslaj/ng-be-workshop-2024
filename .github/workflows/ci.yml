@@ -34,7 +34,7 @@ jobs:
           node-version: 20
           cache: 'pnpm'
 
-      - run: pnpm install --frozen-lockfile
+      - run: pnpm install --frozen-lockfile --dev
       - run: pnpm exec playwright install --with-deps
       - uses: nrwl/nx-set-shas@v4
 
